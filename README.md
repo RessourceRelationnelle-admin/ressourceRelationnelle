@@ -118,4 +118,4 @@ lors de l'installation de PostgreSQL.
 Dans un terminal de commandes, accéder au dossier */serveur/*, et exécuter la commande ``npm start``
 pour démarrer le serveur.
 
-testTEST
+biggus testus
