@@ -8,3 +8,12 @@ server/.env
 .idea/client.iml
 .idea/watcherTasks.xml
 .idea/ressourceRelationnelle.iml
+.idea/workspace.xml
+client/.idea/vcs.xml
+client/.idea/php.xml
+client/.idea/modules.xml
+client/.idea/misc.xml
+client/.idea/client.iml
+client/.idea/watcherTasks.xml
+client/.idea/ressourceRelationnelle.iml
+
