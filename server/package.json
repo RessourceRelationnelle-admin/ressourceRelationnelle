@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint routes/ utils/ db/ server.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +19,8 @@
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.7",
     "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0"
   }
 }

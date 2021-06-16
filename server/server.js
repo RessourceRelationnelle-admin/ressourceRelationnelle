@@ -31,6 +31,7 @@ app.use("/participation", participationRoutes);
 app.use("/fav", favorisRoutes);
 
 // Launching the server
+// eslint-disable-next-line no-undef
 const port = process.env.PORT || 5001;
 app.listen(port, () => {
   console.log(`ResRel API is running on port ${port}`);

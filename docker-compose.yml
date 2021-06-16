@@ -1,0 +1,17 @@
+services:
+  db:
+    image: resreldb
+    environment:
+      POSTGRES_PASSWORD: postgres*
+      POSTGRES_USER: postgres
+      POSTGRES_DB: resrel
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  backend:
+    image: resrelserver
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
