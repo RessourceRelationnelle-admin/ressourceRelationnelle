@@ -7,6 +7,7 @@ module.exports = (req, res, next) => {
     if (!jwtToken) {
       return res.status(403).json("Non autorisÃ©");
     } else {
+      // eslint-disable-next-line no-undef
       const decodedToken = jwt.verify(jwtToken, process.env.JWTSECRET);
       req.idUser = decodedToken.idUser;
       req.isAdmin = decodedToken.isAdmin;

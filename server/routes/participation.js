@@ -36,7 +36,7 @@ router.post("/", userAuth, async (res, req) => {
       [idLeader, idRel]
     );
 
-    participants.rows.filter((relation) => id != relation.iduser);
+    participants.rows.filter((relation) => relation.id != relation.iduser);
 
     const ajoutsFinaux = await db.query(
       `UPDATE ressource_en_cours SET dateFinParticipation=$1 ,participants=$2 Where idRessource=$3 AND idRelation=$4 AND idLeader=$5 RETURNING *`,
