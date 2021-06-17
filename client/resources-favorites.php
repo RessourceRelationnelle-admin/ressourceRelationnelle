@@ -8,11 +8,11 @@ if ($isConnected == false && $profile == '') {
 }
 else {
     // On récupère la liste des ressources vérifiées
-    $getResourcesIsVerified = "http://localhost:5000/res/Verified";
+    $getResourcesIsVerified = "http://db:5000/res/Verified";
     $resourcesList = json_decode(file_get_contents($getResourcesIsVerified), true);
 
     // Favoris de l'utilisateur
-    $getfavroute = "http://localhost:5000/fav/user/" . $profile['utilisateur']['iduser'];
+    $getfavroute = "http://db:5000/fav/user/" . $profile['utilisateur']['iduser'];
     $favlist = json_decode(file_get_contents($getfavroute), true);
 
     if (isset ($_SESSION['jwtToken'])) {

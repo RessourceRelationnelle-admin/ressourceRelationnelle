@@ -80,7 +80,7 @@
 
             $.ajax({
                 type : 'PUT',
-                url : 'http://localhost:5000/res/update',
+                url : 'http://db:5000/res/update',
 
                 data: {
                     "id" : id,

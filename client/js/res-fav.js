@@ -5,7 +5,7 @@ $( ".btn-fav" ).click(function() {
     var id = this.id;
     $.ajax({
         type : 'POST',
-        url : 'http://localhost:5000/fav/' + id,
+        url : 'http://db:5000/fav/' + id,
         data: {
             "id": id
         },
@@ -30,7 +30,7 @@ $( ".btn-fav-delete" ).click(function() {
     var id = this.id;
     $.ajax({
         type : 'DELETE',
-        url : 'http://localhost:5000/fav/' + id,
+        url : 'http://db:5000/fav/' + id,
         data: {
             "id": id
         },

@@ -79,7 +79,7 @@ $( document ).ready(function() {
     //alert(tokenParse.jwtToken);
 
     $.ajax({
-        url : 'http://localhost:5000/users/'+ id,
+        url : 'http://db:5000/users/'+ id,
         type : 'GET',
         dataType : 'json',
         success : function(json){
@@ -119,7 +119,7 @@ $( document ).ready(function() {
                 "situation": situation
             },
             type : 'PUT',
-            url : 'http://localhost:5000/users/update/'+ id,
+            url : 'http://db:5000/users/update/'+ id,
             dataType : 'json',
             beforeSend: function (xhr) {
                 xhr.setRequestHeader("Authorization", 'Bearer '+ tokenParse.jwtToken);

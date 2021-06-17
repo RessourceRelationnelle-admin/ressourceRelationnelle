@@ -145,7 +145,7 @@
         collection.each(function () {
             var id = $(this).val();
             $.ajax({
-                url: 'http://localhost:5000/users/' + id,
+                url: 'http://db:5000/users/' + id,
                 type: 'GET',
                 dataType: 'json',
                 success: function (json) {
@@ -159,7 +159,7 @@
         commentcollection.each(function () {
             var id = $(this).val();
             $.ajax({
-                url: 'http://localhost:5000/users/' + id,
+                url: 'http://db:5000/users/' + id,
                 type: 'GET',
                 dataType: 'json',
                 success: function (json) {
@@ -173,7 +173,7 @@
         typecollection.each(function () {
             var id = $(this).val();
             $.ajax({
-                url: 'http://localhost:5000/restyp/' + id,
+                url: 'http://db:5000/restyp/' + id,
                 type: 'GET',
                 dataType: 'json',
                 success: function (json) {
@@ -187,7 +187,7 @@
         catcollection.each(function () {
             var id = $(this).val();
             $.ajax({
-                url: 'http://localhost:5000/rescat/' + id,
+                url: 'http://db:5000/rescat/' + id,
                 type: 'GET',
                 dataType: 'json',
                 success: function (json) {
@@ -208,7 +208,7 @@
                     "contenu": contenu
                 },
                 type : 'POST',
-                url : 'http://localhost:5000/res/comm/' +idRessource,
+                url : 'http://db:5000/res/comm/' +idRessource,
                 dataType : 'json',
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("Authorization", 'Bearer '+ tokenParse.jwtToken);
@@ -231,7 +231,7 @@
             console.log(id);
             $.ajax({
                 type : 'DELETE',
-                url : 'http://localhost:5000/res/comm/delete/' + id,
+                url : 'http://db:5000/res/comm/delete/' + id,
                 data: {
                     "id": id
                 },

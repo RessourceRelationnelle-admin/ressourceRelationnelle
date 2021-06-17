@@ -18,7 +18,7 @@ $isConnected = false;
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
     // On récupère le tableau de données JSON renvoyé par l'url
-    $getuser = ("http://localhost:5000/users/" . $user_id);
+    $getuser = ("http://db:5000/users/" . $user_id);
     $profile = json_decode(file_get_contents($getuser), true);
 }
 else if (isset($_SESSION['user'])) {

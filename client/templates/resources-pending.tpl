@@ -27,7 +27,7 @@
         collection.each(function() {
             var id = $(this).val();
             $.ajax({
-                url : 'http://localhost:5000/users/'+ id,
+                url : 'http://db:5000/users/'+ id,
                 type : 'GET',
                 dataType : 'json',
                 success : function(json){
@@ -37,7 +37,7 @@
         });
 
         $.ajax({
-            url : 'http://localhost:5000/res/NotVerified',
+            url : 'http://db:5000/res/NotVerified',
             type : 'GET',
             dataType : 'json',
             beforeSend: function (xhr) {
@@ -47,7 +47,7 @@
                 for (let i = 0; i <= Object.keys(json).length; i++) {
 
                     $.ajax({
-                        url : 'http://localhost:5000/users/'+ json.ressources[i]['idauteur'],
+                        url : 'http://db:5000/users/'+ json.ressources[i]['idauteur'],
                         type : 'GET',
                         dataType : 'json',
                         success : function(json){
@@ -99,7 +99,7 @@
                         var id = this.id;
                         $.ajax({
                             type : 'POST',
-                            url : 'http://localhost:5000/res/isVerified/' + id,
+                            url : 'http://db:5000/res/isVerified/' + id,
                             data: {
                                 "id": id
                             },
@@ -123,7 +123,7 @@
                         var id = this.id;
                         $.ajax({
                             type : 'DELETE',
-                            url : 'http://localhost:5000/res/delete/' + id,
+                            url : 'http://db:5000/res/delete/' + id,
                             data: {
                                 "id": id
                             },

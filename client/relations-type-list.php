@@ -7,7 +7,7 @@ if ($user['utilisateur']['issuperadmin'] == false && $user['utilisateur']['isadm
     header('Location: home.php');
 }
 else {
-    $getreltyperoute = "http://localhost:5000/reltyp";
+    $getreltyperoute = "http://db:5000/reltyp";
     $reltypelist = json_decode(file_get_contents($getreltyperoute), true);
 
     echo $twig->render('relations-type-list.tpl', [

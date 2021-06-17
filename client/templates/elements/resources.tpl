@@ -74,7 +74,7 @@ $( document ).ready(function() {
     collection.each(function () {
         var id = $(this).val();
         $.ajax({
-            url: 'http://localhost:5000/users/' + id,
+            url: 'http://db:5000/users/' + id,
             type: 'GET',
             dataType: 'json',
             success: function (json) {
@@ -88,7 +88,7 @@ $( document ).ready(function() {
     typecollection.each(function () {
         var id = $(this).val();
         $.ajax({
-            url: 'http://localhost:5000/restyp/' + id,
+            url: 'http://db:5000/restyp/' + id,
             type: 'GET',
             dataType: 'json',
             success: function (json) {
@@ -102,7 +102,7 @@ $( document ).ready(function() {
     catcollection.each(function () {
         var id = $(this).val();
         $.ajax({
-            url: 'http://localhost:5000/rescat/' + id,
+            url: 'http://db:5000/rescat/' + id,
             type: 'GET',
             dataType: 'json',
             success: function (json) {

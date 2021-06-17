@@ -8,13 +8,13 @@ if ($user['utilisateur']['issuperadmin'] == false && $user['utilisateur']['isadm
 }
 else {
     $resId = $_GET['idres'];
-    $getres = "http://localhost:5000/res/" . $resId;
+    $getres = "http://db:5000/res/" . $resId;
     $ressource = json_decode(file_get_contents($getres), true);
 
-    $getcatroute = "http://localhost:5000/rescat";
+    $getcatroute = "http://db:5000/rescat";
     $catlist = json_decode(file_get_contents($getcatroute), true);
 
-    $gettyperoute = "http://localhost:5000/restyp";
+    $gettyperoute = "http://db:5000/restyp";
     $typelist = json_decode(file_get_contents($gettyperoute), true);
 
     echo $twig->render('resources-edit.tpl', [

@@ -8,7 +8,7 @@ if ($isConnected == false && $profile == '') {
 }
 else {
     // On récupère la liste des ressources vérifiées
-    $getResourcesIsVerified = "http://localhost:5000/res/Verified";
+    $getResourcesIsVerified = "http://db:5000/res/Verified";
     $resourcesList = json_decode(file_get_contents($getResourcesIsVerified), true);
 
     if (isset ($_SESSION['jwtToken'])) {

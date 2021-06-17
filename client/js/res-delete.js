@@ -5,7 +5,7 @@ $( ".btn-delete" ).click(function() {
     var id = this.id;
     $.ajax({
         type : 'DELETE',
-        url : 'http://localhost:5000/res/delete/' + id,
+        url : 'http://db:5000/res/delete/' + id,
         data: {
             "id": id
         },
