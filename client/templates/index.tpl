@@ -100,7 +100,7 @@ function connexion(){
     var email = $("#user_email").val();
     var mdp = $("#user_pass").val();
     $.ajax({
-        url : 'http://localhost:5000/users/connexion',
+        url : 'http://db:5000/users/connexion',
         type : 'POST',
         data: {
         "email": email,
@@ -134,7 +134,7 @@ function inscription(){
         handicap = false;
     }
     $.ajax({
-        url : 'http://localhost:5000/users/inscription',
+        url : 'http://db:5000/users/inscription',
         type : 'POST',
         data: {
             "email": email,

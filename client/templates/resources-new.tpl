@@ -79,7 +79,7 @@
 
             $.ajax({
                 type : 'POST',
-                url : 'http://localhost:5000/res/create',
+                url : 'http://db:5000/res/create',
 
                 data: {
                     "titre": titre,

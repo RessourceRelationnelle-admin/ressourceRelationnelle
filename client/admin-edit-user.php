@@ -8,7 +8,7 @@ if ($user['utilisateur']['issuperadmin'] == false && $user['utilisateur']['isadm
     header('Location: home.php');
 }
 else {
-    $getusersroute = "http://localhost:5000/users";
+    $getusersroute = "http://db:5000/users";
     $userslist = json_decode(file_get_contents($getusersroute), true);
 
 //var_dump( $_SESSION['jwtToken']);

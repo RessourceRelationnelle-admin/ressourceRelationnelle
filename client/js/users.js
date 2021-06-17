@@ -21,7 +21,7 @@ $(document).ready(function(){
         var typeRel = $("#selectTypRel").val();
 
         $.ajax({
-            url : 'http://localhost:5000/rel/create',
+            url : 'http://db:5000/rel/create',
             type : 'POST',
             dataType : 'json',
             data: {

@@ -38,7 +38,7 @@
         var id = this.id;
         $.ajax({
             type : 'DELETE',
-            url : 'http://localhost:5000/rescat/delete/' + id,
+            url : 'http://db:5000/rescat/delete/' + id,
             data: {
                 "id": id
             },

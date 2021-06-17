@@ -10,7 +10,7 @@ if (isset($_GET['token'])) {
         $_SESSION['token'] = $token;
         $_SESSION['email'] = $email;
         // On récupère l'user connecté grâce à son email
-        $getuser = ("http://localhost:5000/users/getId/" . $email);
+        $getuser = ("http://db:5000/users/getId/" . $email);
         $_SESSION['user'] = json_decode(file_get_contents($getuser), true);
     }
     echo "Connexion réussie";

@@ -36,7 +36,7 @@
 
             $.ajax({
                 type : 'POST',
-                url : 'http://localhost:5000/reltyp',
+                url : 'http://db:5000/reltyp',
                 data: {
                     "name": libelleTypRel
                 },

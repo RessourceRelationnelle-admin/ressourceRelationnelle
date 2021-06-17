@@ -143,7 +143,7 @@ $(".deleteUtilisateur").click(function() {
     //alert(userId);
     //console.log(tokenParse.jwtToken);
     $.ajax({
-        url : 'http://localhost:5000/users/delete/'+ userId,
+        url : 'http://db:5000/users/delete/'+ userId,
         headers: {
         'Accept':'application/json',
         'Content-Type':'application/json',
@@ -170,7 +170,7 @@ $(".btn-modo").click(function() {
     var token = $("#token").val();
     var tokenParse = JSON.parse(token);
     $.ajax({
-        url : 'http://localhost:5000/users/newModo/'+ userId,
+        url : 'http://db:5000/users/newModo/'+ userId,
         type : 'PUT',
         dataType : 'json',
         beforeSend: function (xhr) {
@@ -192,7 +192,7 @@ $(".btn-admin").click(function() {
     var token = $("#token").val();
     var tokenParse = JSON.parse(token);
     $.ajax({
-        url : 'http://localhost:5000/users/newAdmin/'+ userId,
+        url : 'http://db:5000/users/newAdmin/'+ userId,
         type : 'PUT',
         dataType : 'json',
         beforeSend: function (xhr) {
@@ -214,7 +214,7 @@ $(".btn-no-modo").click(function() {
     var token = $("#token").val();
     var tokenParse = JSON.parse(token);
     $.ajax({
-        url : 'http://localhost:5000/users/noModo/'+ userId,
+        url : 'http://db:5000/users/noModo/'+ userId,
         type : 'PUT',
         dataType : 'json',
         beforeSend: function (xhr) {
@@ -236,7 +236,7 @@ $(".btn-no-admin").click(function() {
     var token = $("#token").val();
     var tokenParse = JSON.parse(token);
     $.ajax({
-        url : 'http://localhost:5000/users/noAdmin/'+ userId,
+        url : 'http://db:5000/users/noAdmin/'+ userId,
         type : 'PUT',
         dataType : 'json',
         beforeSend: function (xhr) {
@@ -268,7 +268,7 @@ $(".btn-remove-relation").click(function() {
     var token = $("#token").val();
     var tokenParse = JSON.parse(token);
     $.ajax({
-        url : 'http://localhost:5000/rel/delete/'+ myId + '/' + userId,
+        url : 'http://db:5000/rel/delete/'+ myId + '/' + userId,
         type : 'DELETE',
         dataType : 'json',
         beforeSend: function (xhr) {

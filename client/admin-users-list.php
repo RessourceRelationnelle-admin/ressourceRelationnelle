@@ -9,7 +9,7 @@ if ($user['utilisateur']['issuperadmin'] == false && $user['utilisateur']['isadm
 }
 else {
 // On récupère le tableau de données JSON renvoyé par l'url
-    $getusersroute = "http://localhost:5000/users";
+    $getusersroute = "http://db:5000/users";
     $userslist = json_decode(file_get_contents($getusersroute), true);
 
     echo $twig->render('admin-users-list.tpl', [

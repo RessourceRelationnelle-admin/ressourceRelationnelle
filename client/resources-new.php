@@ -7,10 +7,10 @@ if ($isConnected == false) {
     header('Location: home.php');
 }
 else {
-    $getcatroute = "http://localhost:5000/rescat";
+    $getcatroute = "http://db:5000/rescat";
     $catlist = json_decode(file_get_contents($getcatroute), true);
 
-    $gettyperoute = "http://localhost:5000/restyp";
+    $gettyperoute = "http://db:5000/restyp";
     $typelist = json_decode(file_get_contents($gettyperoute), true);
 
     echo $twig->render('resources-new.tpl', [

@@ -38,7 +38,7 @@
 
             $.ajax({
                 type : 'PUT',
-                url : 'http://localhost:5000/rescat/update/' + id,
+                url : 'http://db:5000/rescat/update/' + id,
                 data: {
                     "name": libelleCatRes
                 },
