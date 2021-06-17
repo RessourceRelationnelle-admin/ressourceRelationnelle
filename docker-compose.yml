@@ -1,5 +1,6 @@
 services:
   db:
+    build: ./db
     image: resreldb
     environment:
       POSTGRES_PASSWORD: postgres*
@@ -11,7 +12,16 @@ services:
       - "5432:5432"
   backend:
     image: resrelserver
+    build: ./server
     depends_on:
       - db
     ports:
       - "5000:5000"
+  frontend:
+    image: resrelclient
+    build: ./client
+    ports:
+      - "8080:80"
+    volumes:
+      - /var/www/html/public
+      - /var/etc/apache2/
