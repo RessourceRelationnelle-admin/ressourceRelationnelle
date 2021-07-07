@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "jest tests/users",
+    "test": "jest tests/users --detectOpenHandles",
     "preinstall": "npm i nodemon -g",
     "lint": "eslint routes/ utils/ db/ server.js"
   },

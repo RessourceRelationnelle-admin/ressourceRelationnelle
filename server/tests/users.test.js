@@ -1,6 +1,5 @@
 require("dotenv").config()
 const express = require("express"); // import express
-const db = require("../db");
 const app = express();
 const request = require("supertest"); // supertest is a framework that allows to easily test web apisconst app = express(); //an instance of an express app, a 'fake' express app
 const userRoutes = require("../routes/users"); //import file we are testing
@@ -62,23 +61,13 @@ describe("user-routes", () => {
         },
     ]);
     const firstUser = body[0].id;
+
+    it("GET /users/1 - success", async () => {
+      const { body } = await request(app).get(`/users/${firstUser.id}`);
+  
+      expect(firstUser).toEqual(body[0]);
+    });
+  });
   })   
 
-  it("GET /users/1 - success", async () => {
-    const firstUser = {
-      id: '1',
-      emailUser:'jean5414@yahoo.com', 
-      mdpUser: 'bonjour89654',
-      nomUser:'Dupont' ,
-      prenomUser: 'Jean', 
-      telUser:'0647458966', 
-      adresseUser: '2 rue Jean Jaurès', 
-      paysUser: 'France',
-      situationUser:'',
-      handicapUser:false
-    }
-    const { body } = await request(app).get(`/users/${firstUser.id}`);
-
-    expect(firstUser).toEqual(1);
-  });
-});
+ 
